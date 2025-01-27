@@ -6,7 +6,7 @@
 cd C:\Temp\
 ##  Erstelle Ordner
 mkdir HardeningKitty
-cd HardeningKitty
+cd HardeningKitty-main
 ##  Lade Hardening Kitty Customer Setup von git herunter 
 iwr -uri https://github.com/Chuggelfischli/HardeningKitty/archive/refs/heads/main.zip -Outfile hardeningkitty.zip
 ##  Extract
