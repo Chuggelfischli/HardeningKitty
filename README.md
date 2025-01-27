@@ -1,14 +1,14 @@
-## Wechsle ins Temp Verzeichnis
+####### Wechsle ins Temp Verzeichnis
 cd C:\Temp\
-## Erstelle Ordner
+#######  Erstelle Ordner
 mkdir HardeningKitty
 cd HardeningKitty
-## Lade Hardening Kitty Customer Setup von git herunter 
+#######  Lade Hardening Kitty Customer Setup von git herunter 
 iwr -uri https://github.com/Chuggelfischli/HardeningKitty/archive/refs/heads/main.zip -Outfile hardeningkitty.zip
-## Extract
+#######  Extract
 Expand-Archive .\hardeningkitty.zip .
 cd .\Hardening_Kitty\
-## Starte Hardenning Kitty
+#######  Starte Hardenning Kitty
 Invoke-HardeningKitty -Mode Audit -Log -Report
-## Erstelle High_Medium_Low.log File
+#######  Erstelle High_Medium_Low.log File
 .\.\Scriptilette.ps1
