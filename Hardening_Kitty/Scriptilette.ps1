@@ -1,12 +1,15 @@
 # Pfade für Quell- und Zieldatei definieren
-$quellDatei = "C:\temp\SteffiTest\HardeningKitty\HardeningKitty0.9.3\hardeningkitty_log_14n020_finding_list_0x6d69636b_machine-20250127-143541.log"
-$zielDatei = "C:\temp\SteffiTest\HardeningKitty\HardeningKitty0.9.3\mediumundlowalers.txt"
+$currentPath = Get-Location
+## Quelldatei einlesen - Log File welches die Auszuwertenden Alerts enthält
+$source = Read-Host "Geben Sie die Quelldatei inkl. vollstaendigen Pfad an, ohne Anfuehrungszeichen"
+
+$destination = "$currentPath\High_Medium_Low_Severity_Alerts.log"
 
 # Inhalt der Quelldatei lesen und filtern
-$gefilterteZeilen = Get-Content $quellDatei | Where-Object { $_ -match "(High|Medium|Low)$" }
+$getFilteredRows = Get-Content $source | Where-Object { $_ -match "(High|Medium|Low)$" }
 
 # Gefilterte Zeilen in die Zieldatei schreiben
-$gefilterteZeilen | Set-Content $zielDatei
+$getFilteredRows | Set-Content $destination
 
 # Bestätigung ausgeben
-Write-Host "Gefilterte Zeilen wurden in $zielDatei kopiert."
+Write-Host "Die gefilterte Zeilen wurden in $destination kopiert. Have a great Day ;D"
