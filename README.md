@@ -11,7 +11,7 @@ cd HardeningKitty
 iwr -uri https://github.com/Chuggelfischli/HardeningKitty/archive/refs/heads/main.zip -Outfile hardeningkitty.zip
 ##  Extract
 Expand-Archive .\hardeningkitty.zip .
-cd .\Hardening_Kitty-main\
+cd HardeningKitty-main
 ##  Starte Hardenning Kitty
 Invoke-HardeningKitty -Mode Audit -Log -Report
 ##  Erstelle High_Medium_Low.log File
