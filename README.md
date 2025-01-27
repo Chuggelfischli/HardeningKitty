@@ -16,4 +16,6 @@ cd HardeningKitty-main
 Invoke-HardeningKitty -Mode Audit -Log -Report
 ##  Erstelle High_Medium_Low.log File
 .\.\Scriptilette.ps1
+
+
 ```
