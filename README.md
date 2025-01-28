@@ -12,6 +12,8 @@ iwr -uri https://github.com/Chuggelfischli/HardeningKitty/archive/refs/heads/mai
 ##  Extract
 Expand-Archive .\hardeningkitty.zip .
 cd HardeningKitty-main\Hardening_kitty\
+##Import Module
+Import-Module .\HardeningKitty.psm1
 ##  Starte Hardenning Kitty
 Invoke-HardeningKitty -Mode Audit -Log -Report
 ##  Erstelle High_Medium_Low.log File
