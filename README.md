@@ -1,7 +1,6 @@
 # Powershell Command to Start for Customer
 
 ``` powershell
-Powershell Hardening Kitty
 ## Wechsle ins Temp Verzeichnis
 cd C:\Temp\
 ## Erstelle Ordner
