@@ -1,3 +1,30 @@
+# Powershell Command to Start for Customer
+
+``` powershell
+Powershell Hardening Kitty
+## Wechsle ins Temp Verzeichnis
+cd C:\Temp\
+## Erstelle Ordner
+mkdir HardeningKitty
+cd HardeningKitty
+## Lade von Hardening Kitty Customer Setup von git herunter 
+iwr -uri https://github.com/Chuggelfischli/HardeningKitty/archive/refs/heads/main.zip -Outfile hardeningkitty.zip
+## Extract
+Expand-Archive .\hardeningkitty.zip .
+cd HardeningKitty-main
+#import Module
+Import-Module .\HardeningKitty.psm1
+## Starte Hardenning Kitty
+Invoke-HardeningKitty -Mode Audit -Log -Report
+.\.\Scriptilette.ps1
+
+
+```
+
+
+
+
+
 # HardeningKitty
 
 This is the stable version of _HardeningKitty_ from the [Windows Hardening Project by Michael Schneider](https://github.com/0x6d69636b/windows_hardening). The stable version of _HardeningKitty_ is signed with the code signing certificate of _scip AG_. **Since this is the stable version, we do not accept pull requests in this repo, please send them to the [development repo](https://github.com/0x6d69636b/windows_hardening)**. 
